@@ -7,7 +7,6 @@ module "ec2-instance" {
   ami = "ami-065efef2c739d613b"
   availability_zone = data.aws_availability_zones.available.names[0]
   instance_type          = var.instance_type[terraform.workspace]
-  key_name = "${var.name_prefix}-web"
   vpc_security_group_ids = [module.security-group.security_group_id]
   root_block_device = [{
     volume_type = "gp2"
