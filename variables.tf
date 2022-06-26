@@ -19,3 +19,8 @@ variable "project" {
 }
 variable "instance_type" {
 }
+
+variable "TFC_WORKSPACE_NAME" {
+  type = string
+  default = ""
+}

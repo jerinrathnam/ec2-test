@@ -6,7 +6,7 @@ module "ec2-instance" {
 
   ami = "ami-065efef2c739d613b"
   availability_zone = data.aws_availability_zones.available.names[0]
-  instance_type          = var.instance_type[terraform.workspace]
+  instance_type          = var.instance_type[local.workspace]
   vpc_security_group_ids = [module.security-group.security_group_id]
   root_block_device = [{
     volume_type = "gp2"
@@ -21,7 +21,7 @@ module "ec2-instance" {
   EOF
 
   tags = merge(local.common_tags, {
-    Name = "${var.name_prefix[terraform.workspace]}-web-instance"
+    Name = "${var.name_prefix[local.workspace]}-web-instance"
   })
 
 } 

@@ -4,4 +4,6 @@ locals {
     project_type = var.project
     
   }
+
+  workspace = var.TFC_WORKSPACE_NAME != "" ? var.TFC_WORKSPACE_NAME : terraform.workspace
 }
