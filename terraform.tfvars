@@ -5,7 +5,7 @@ instance_type = {
 }
 
 name_prefix = {
-  dev = "Develop"
-  stage = "Stage"
-  uat = "UAT"
+  dev = "dev"
+  stage = "stage"
+  uat = "uat"
 }
