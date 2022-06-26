@@ -1,7 +1,7 @@
 module "security-group" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "4.9.0"
-  name = "${var.name_prefix[terraform.workspace]}-sg"
+  name = "${var.name_prefix[local.workspace]}-sg"
   egress_with_cidr_blocks = [
     {
     from_port   = 0
@@ -27,7 +27,7 @@ module "security-group" {
     }
   ]
   tags = merge(local.common_tags, {
-    Name = "${var.name_prefix[terraform.workspace]}-web-sg"
+    Name = "${var.name_prefix[local.workspace]}-web-sg"
   })
  
 }
