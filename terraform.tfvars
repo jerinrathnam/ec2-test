@@ -9,3 +9,9 @@ name_prefix = {
   stage = "stage"
   uat = "uat"
 }
+
+ami_id = {
+  dev = "ami-065efef2c739d613b"
+  stage = "ami-09b2f6d85764ec71b"
+  uat = "ami-09de362f44ba0a166"
+}

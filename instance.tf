@@ -4,7 +4,7 @@ module "ec2-instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "4.0.0"
 
-  ami = "ami-065efef2c739d613b"
+  ami = var.ami_id[terraform.workspace]
   availability_zone = data.aws_availability_zones.available.names[0]
   instance_type          = var.instance_type[local.workspace]
   vpc_security_group_ids = [module.security-group.security_group_id]
