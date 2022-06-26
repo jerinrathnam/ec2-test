@@ -8,12 +8,6 @@ module "ec2-instance" {
   availability_zone = data.aws_availability_zones.available.names[0]
   instance_type          = var.instance_type[local.workspace]
   vpc_security_group_ids = [module.security-group.security_group_id]
-  root_block_device = [{
-    volume_type = "gp2"
-    volume_size = 8
-    delete_on_termination = true
-    encrypted = false
-  }]
   user_data = <<EOF
   #! /bin/bash
   sudo amazon-linux-extras install -y nginx1
