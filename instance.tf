@@ -21,7 +21,7 @@ module "ec2-instance" {
   EOF
 
   tags = merge(local.common_tags, {
-    Name = "${var.name_prefix}-web-instance"
+    Name = "${var.name_prefix[terraform.workspace]}-web-instance"
   })
 
 } 

@@ -3,3 +3,9 @@ instance_type = {
   stage = "t3.micro"
   uat = "t2.small"
 }
+
+name_prefix = {
+  dev = "Develop"
+  stage = "Stage"
+  uat = "UAT"
+}
