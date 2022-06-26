@@ -24,3 +24,6 @@ variable "TFC_WORKSPACE_NAME" {
   type = string
   default = ""
 }
+
+variable "ami_id" {
+}
