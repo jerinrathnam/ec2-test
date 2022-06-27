@@ -5,13 +5,19 @@ instance_type = {
 }
 
 name_prefix = {
-  dev = "dev"
-  stage = "stage"
-  uat = "uat"
+  dev = "Develop"
+  stage = "Stage"
+  uat = "UAT"
 }
 
 ami_id = {
   dev = "ami-065efef2c739d613b"
   stage = "ami-09b2f6d85764ec71b"
   uat = "ami-09de362f44ba0a166"
+}
+
+key_name = {
+  dev = "jerin-us-east"
+  stage = "jerin-us-west"
+  uat = "jerin-ap-south"
 }

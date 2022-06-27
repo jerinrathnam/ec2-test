@@ -26,6 +26,7 @@ module "security-group" {
       cidr_blocks = "0.0.0.0/0"
     }
   ]
+  
   tags = merge(local.common_tags, {
     Name = "${var.name_prefix[local.workspace]}-web-sg"
   })
